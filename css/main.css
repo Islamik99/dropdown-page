@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+ .service__inner-title{
+    position: relative;
+    left: 23%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    color: #83888F;
+    cursor: pointer;
+}
+
+
+.service-inner__after::after{
+    position: absolute;
+    left: 710px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    display: block;
+    content: "";
+    width: 19px;
+    height: 11px;
+    background: url("../images/icon.svg");
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+} 
+
+.service__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.service__inner-title:hover ~ .service__list{
+    opacity: 2;
+    pointer-events: all;
+}
+
+.service__item{
+    position: relative;
+    margin-right: 23px;
+    width: 228px;
+    height: 250px;
+    background: #F4F1EB;
+    border-radius: 8px;
+    cursor:copy;
+}
+
+.service__list + .service__item-desc:checked{
+    background: #0E8784;
+    margin-right: 23px;
+    width: 228px;
+    height: 250px;
+    border-radius: 8px;
+    transition: all 0.4 smooth;
+}
+
+.service__item:nth-last-child(1){
+    margin-right: 0;
+}
+
+.service__label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.item__desc-title{
+    font-family: 'Fraunces 9pt';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    padding-top: 28px;
+    padding-left: 32px;
+    color: #333D4B;
+}
+
+.item__desc-text{
+    width: 172px;
+    height: 78px;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    padding-left: 28px;
+    padding-bottom: 84px;
+    color: #333D4B;
+} 
